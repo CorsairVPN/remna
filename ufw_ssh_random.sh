@@ -51,9 +51,9 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update -y
 apt-get install -y ufw
 
-ufw allow "$new_port"/tcp
-ufw allow 80/tcp
-ufw allow 443/tcp
+ufw allow "$new_port"
+ufw allow 80
+ufw allow 443
 ufw --force enable
 
 if ufw status | grep -q '22/tcp'; then
