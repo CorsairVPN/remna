@@ -54,6 +54,7 @@ apt-get install -y ufw
 ufw allow "$new_port"
 ufw allow 80
 ufw allow 443
+ufw allow 8443
 ufw --force enable
 
 if ufw status | grep -q '22/tcp'; then
